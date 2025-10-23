@@ -1,13 +1,14 @@
 
 import './App.css';
+import Main from './Main';
 
 function App() {
   return (
-    <div className="Little lemon">
-      <header className="App-header">
-        <h1>Welcome to Little Lemon</h1> 
-      </header>
-    </div>
+    <>
+      <Header />
+      <Main />
+      <Footer />
+    </>
   );
 }
 
