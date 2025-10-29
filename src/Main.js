@@ -1,6 +1,9 @@
 import React from "react";
 import "./Main.css";
-
+import restaurantFood from "./assets/restaurant-food.jpg";
+import greekSalad from "./assets/greek-salad.jpg";
+import bruschetta from "./assets/bruschetta.png"; 
+import lemonDessert from "./assets/lemon-dessert.jpg";
 
 function Main() {
   return (
@@ -13,6 +16,7 @@ function Main() {
             focused on traditional
             recipes served with a modern
             twist.</p>
+            <img src={restaurantFood} alt="Restaurant Food" />
             <button>Reserve a Table</button>
         </section>
 
@@ -23,7 +27,7 @@ function Main() {
 
         <section className="menu-section">
           <article>
-            <img src="assets/greek-salad.jpg" alt="Greek Salad" />
+            <img src={greekSalad} alt="Greek Salad" />
             <h3>Greek Salad</h3>
             <p>The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.</p>
             <p><strong>$12.99</strong></p>
@@ -31,7 +35,7 @@ function Main() {
           </article>
 
           <article>
-           <img src="assets/bruschetta.jpg" alt="Bruschetta" />
+           <img src={bruschetta} alt="Bruschetta" />
             <h3>Bruschetta</h3>
             <p>This Italian appetizer is made with fresh tomatoes, basil, and mozzarella cheese on toasted bread.</p>
             <p><strong>$5.99</strong></p>
@@ -39,7 +43,7 @@ function Main() {
           </article>
 
           <article>
-            <img src="assets/lemon-dessert.jpg" alt="Lemon Dessert" />
+            <img src={lemonDessert} alt="Lemon Dessert" />
             
             <h3>Lemon Dessert</h3>
             <p>Our Lemon Dessert is a light and refreshing treat made with real lemon juice and zest, served with a dollop of whipped cream.</p>

@@ -6,7 +6,7 @@ function Nav() {
     <nav className="nav-bar">
       
       <ul>
-        <img src="little-lemon logo.png" alt="Little Lemon Logo" />
+        <img src="little-lemon logo.png" className="main-logo" alt="Little Lemon Logo" />
           <li><a href="/home">Home</a></li>
           <li><a href="/about">About</a></li>
           <li><a href="/menu">Menu</a></li>
