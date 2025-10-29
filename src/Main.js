@@ -3,7 +3,7 @@ import React from "react";
 function Main() {
   return (
     <main>
-    <section>
+    <section className="intro-section">
           <h2>Little Lemon</h2>
           <h3>Chicago</h3>
           <p>We are a family owned
@@ -14,12 +14,12 @@ function Main() {
             <button>Reserve a Table</button>
         </section>
 
-        <section>
+        <section className="specials-section">
           <h2>This weeks specials!</h2>
           <button>Online Menu</button>
         </section>
 
-        <section>
+        <section className="menu-section">
           <article>
             <img src="greek-salad.jpg" alt="Greek Salad" />
             <h3>Greek Salad</h3>
@@ -46,7 +46,7 @@ function Main() {
           </article>
         </section>
 
-        <section>
+        <section className="testimonials-section">
           <h2>Testimonials</h2>
           <article>
             <h4>Rating: 5/5</h4>
@@ -79,7 +79,7 @@ function Main() {
           </article>
        </section>
 
-       <section>
+       <section className="about-section">
         <h2>About Little Lemon</h2>
         <h3>Chicago</h3>
         <p>Little Lemon is a charming Mediterranean restaurant located in the heart of Chicago.

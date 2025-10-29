@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer>
+    <footer className="footer">
      <img src="footer-logo.png" alt="Little Lemon Logo" />
         <h4>Navigation</h4>
          <ul>
