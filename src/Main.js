@@ -4,30 +4,40 @@ import restaurantFood from "./assets/restaurant-food.jpg";
 import greekSalad from "./assets/greek-salad.jpg";
 import bruschetta from "./assets/bruschetta.png"; 
 import lemonDessert from "./assets/lemon-dessert.jpg";
+import star from "./assets/star.png";
+import jamieOlive from "./assets/JamieOlive.png";
+import johnDoe from "./assets/JohnDoe.png";
+import maryJane from "./assets/MaryJane.png";
+import tillyJonas from "./assets/TillyJonas.png";   
 
 function Main() {
   return (
     <main>
     <section className="intro-section">
-          <h2>Little Lemon</h2>
-          <h3>Chicago</h3>
-          <p>We are a family owned
+      <div className="intro-content">
+          <h2 className="main-title">Little Lemon</h2>
+          <h3 className="main-subtitle">Chicago</h3>
+          <p className="main-description">We are a family owned
             mediterranean restaurant,
             focused on traditional
             recipes served with a modern
             twist.</p>
+            <button className="reserve-table-btn">Reserve a Table</button>
+      </div>
+
+            <div className="main-food">
             <img src={restaurantFood} alt="Restaurant Food" />
-            <button>Reserve a Table</button>
+            </div>
         </section>
 
         <section className="specials-section">
           <h2>This weeks specials!</h2>
-          <button>Online Menu</button>
+          <button className="online-btn">Online Menu</button>
         </section>
 
         <section className="menu-section">
           <article>
-            <img src={greekSalad} alt="Greek Salad" />
+            <img src={greekSalad} className="menu-food" alt="Greek Salad" />
             <h3>Greek Salad</h3>
             <p>The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.</p>
             <p><strong>$12.99</strong></p>
@@ -35,7 +45,7 @@ function Main() {
           </article>
 
           <article>
-           <img src={bruschetta} alt="Bruschetta" />
+           <img src={bruschetta} className="menu-food" alt="Bruschetta" />
             <h3>Bruschetta</h3>
             <p>This Italian appetizer is made with fresh tomatoes, basil, and mozzarella cheese on toasted bread.</p>
             <p><strong>$5.99</strong></p>
@@ -43,8 +53,7 @@ function Main() {
           </article>
 
           <article>
-            <img src={lemonDessert} alt="Lemon Dessert" />
-            
+            <img src={lemonDessert} className="menu-food" alt="Lemon Dessert" />
             <h3>Lemon Dessert</h3>
             <p>Our Lemon Dessert is a light and refreshing treat made with real lemon juice and zest, served with a dollop of whipped cream.</p>
             <p><strong>$8.99</strong></p>
@@ -52,34 +61,49 @@ function Main() {
           </article>
         </section>
 
+       <h2 className="testimonials">Testimonials</h2>
         <section className="testimonials-section">
-          <h2>Testimonials</h2>
-          <article>
+          
+          <article className="card">
             <h4>Rating: 5/5</h4>
-            <img src="star-rating.png" alt="5 star rating" />
-            <img src="assets/jamie Olive.png" alt="Customer Jamie" />
+            <img src={star} className="star-rating" alt="5 star rating" />
+            <img src={star} className="star-rating" alt="5 star rating" />
+            <img src={star} className="star-rating" alt="5 star rating" />
+            <img src={star} className="star-rating" alt="5 star rating" />
+            <img src={star} className="star-rating" alt="5 star rating" />
+            <img src={jamieOlive} alt="Customer Jamie" />
             <p>"The food was amazing and the service was excellent!"</p>
             <p>- Sarah K.</p>
           </article>
-          <article>
-            <h4>Rating: 4.5/5</h4>
-            <img src="star-rating.png" alt="4.5 star rating" />
-            <img src="assets/John doe.png" alt="Customer John" />
+          <article className="card">
+            <h4>Rating: 4/5</h4>
+             <img src={star} className="star-rating" alt="4 star rating" />
+            <img src={star} className="star-rating" alt="4 star rating" />
+            <img src={star} className="star-rating" alt="4 star rating" />
+            <img src={star} className="star-rating" alt="4 star rating" />
+           
+            <img src={johnDoe} alt="Customer John" />
             <p>"A wonderful dining experience with delicious dishes."</p>
             <p>- John D.</p>
           </article>
-          <article>
+          <article className="card">
             <h4>Rating: 5/5</h4>
-            <img src="star-rating.png" alt="5 star rating" />
-            <img src="assets/mary-jane.png" alt="Customer Mary Jane" />
+           <img src={star} className="star-rating" alt="5 star rating" />
+            <img src={star} className="star-rating" alt="5 star rating" />
+            <img src={star} className="star-rating" alt="5 star rating" />
+            <img src={star} className="star-rating" alt="5 star rating" />
+            <img src={star} className="star-rating" alt="5 star rating" />
+            <img src={maryJane} alt="Customer Mary Jane" />
             <p>"I can't wait to come back and try more items from the menu!"</p>
             <p>- Emily R.</p>
           </article>
 
-           <article>
-            <h4>Rating: 5/5</h4>
-            <img src="star-rating.png" alt="5 star rating" />
-            <img src="assets/tilly Jonas.png" alt="Customer Tilly" />
+           <article className="card">
+            <h4>Rating: 3/5</h4>
+          <img src={star} className="star-rating" alt="5 star rating" />
+            <img src={star} className="star-rating" alt="5 star rating" />
+            <img src={star} className="star-rating" alt="5 star rating" />
+            <img src={tillyJonas} alt="Customer Tilly" />
             <p>"The food was absolutely fantastic, and the ambiance was perfect!"</p>
             <p>- Tilly J.</p>
           </article>
