@@ -8,7 +8,10 @@ import star from "./assets/star.png";
 import jamieOlive from "./assets/JamieOlive.png";
 import johnDoe from "./assets/JohnDoe.png";
 import maryJane from "./assets/MaryJane.png";
-import tillyJonas from "./assets/TillyJonas.png";   
+import tillyJonas from "./assets/TillyJonas.png"; 
+import restaurantChefB from "./assets/restaurant-chefB.jpg";
+import restaurant from "./assets/restaurant.jpg";
+
 
 function Main() {
   return (
@@ -110,14 +113,19 @@ function Main() {
        </section>
 
        <section className="about-section">
-        <h2>About Little Lemon</h2>
-        <h3>Chicago</h3>
+        <div className="about-content">
+        
+        <h2 className="main-title">About Little Lemon</h2>
+        <h3 className="main-subtitle1">Chicago</h3>
         <p>Little Lemon is a charming Mediterranean restaurant located in the heart of Chicago.
            We pride ourselves on our warm hospitality and delicious, authentic dishes that bring
           the flavors of the Mediterranean to life. Whether you're joining us for a casual lunch
           or a special dinner, we strive to create a memorable dining experience for all our guests.</p>
-          <img src="assets/restaurant.jpg" alt="Restaurant " />
-          <img src="assets/restaurant-chef-B.jpg" alt="Restaurant Chef B" />
+          </div>
+          <div className="about-images">
+          <img src={restaurantChefB} alt="Restaurant Chef B" className="img1" />
+
+          </div>
        </section>
     </main>
   );
