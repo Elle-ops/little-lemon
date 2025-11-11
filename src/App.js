@@ -1,3 +1,4 @@
+import { BrowserRouter as Router } from 'react-router-dom'
 import React from 'react';
 import Header from './Header';
 import Main from './Main';
@@ -5,12 +6,19 @@ import Footer from './Footer';
 
 function App() {
   return (
-    <>
-      <Header/>
-      <Main />
-      <Footer/>
-    </>
+    <Router>
+      <>
+        <Header/>
+        <Main />
+        <Footer/>
+      </>
+    </Router>
   );
 }
 
 export default App;
+
+
+
+
+

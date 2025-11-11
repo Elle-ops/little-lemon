@@ -1,0 +1,42 @@
+.about-section {
+     background-color: #f8fcfb;
+  padding-left: 190px;
+  padding-right: 250px;
+  padding-top: 50px;
+ display: flex;                 
+  align-items: left;           
+  justify-content: space-between;           
+  flex-wrap: nowrap;              
+}
+
+.about-content {
+   flex: 1;                        
+  max-width: 400px;         
+}   
+.main-subtitle1 {
+  font-size: 20px;
+  color: rgb(26, 25, 25);   
+}
+.chicago-text {
+  color: rgb(26, 25, 25);
+  font-size: 16px;
+  line-height: 1.5;
+}
+.about-images {
+   position: relative;
+    padding-top: 50px;
+    height: 350px;
+  flex: 1;                        /* takes up remaining space */
+  max-width: 50px;               /* optional max width */
+  display: flex;
+  justify-content: right;
+}
+.about-images .img1 {
+    display: block;
+     position: absolute;
+    top: -30px;
+    right: -10px;
+  border-radius: 8px;
+  height: 400px;
+  width: auto;
+}

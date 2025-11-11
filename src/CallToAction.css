@@ -1,0 +1,60 @@
+.intro-section {
+  background-color: #495E57;
+  padding-left: 190px;
+  padding-right: 250px;
+  padding-top: 50px;
+ display: flex;                 
+  align-items: left;           
+  justify-content: space-between;                
+     
+  flex-wrap: nowrap;              
+}
+
+.main-title {
+  font-size: 30px;
+  color: #F4CE14;
+ 
+}
+.main-subtitle {
+  font-size: 20px;
+  color: white;   
+}
+
+.main-description {
+  font-size: 16px;
+  color: white;   
+  margin-top: -10px;
+}
+
+.reserve-table-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #F4CE14;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.intro-content {
+   flex: 1;                        
+  max-width: 400px;         
+}
+
+.main-food { 
+    position: relative;
+    padding-top: 50px;
+    height: 350px;
+  flex: 1;                        /* takes up remaining space */
+  max-width: 50px;               /* optional max width */
+  display: flex;
+  justify-content: right;
+}
+
+.main-food img {
+    position: absolute;
+    top: 12%;
+  border-radius: 8px;
+  height: 400px;
+  width: auto;
+}

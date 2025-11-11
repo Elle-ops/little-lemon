@@ -1,0 +1,171 @@
+.intro-section {
+  background-color: #495E57;
+  padding-left: 190px;
+  padding-right: 250px;
+  padding-top: 50px;
+ display: flex;                 
+  align-items: left;           
+  justify-content: space-between;                
+     
+  flex-wrap: nowrap;              
+}
+
+.main-title {
+  font-size: 30px;
+  color: #F4CE14;
+ 
+}
+.main-subtitle {
+  font-size: 20px;
+  color: white;   
+}
+
+.main-description {
+  font-size: 16px;
+  color: white;   
+  margin-top: -10px;
+}
+
+.reserve-table-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #F4CE14;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.intro-content {
+   flex: 1;                        
+  max-width: 400px;         
+}
+
+.main-food { 
+    position: relative;
+    padding-top: 50px;
+    height: 350px;
+  flex: 1;                        /* takes up remaining space */
+  max-width: 50px;               /* optional max width */
+  display: flex;
+  justify-content: right;
+}
+
+.main-food img {
+    position: absolute;
+    top: 12%;
+  border-radius: 8px;
+  height: 400px;
+  width: auto;
+}
+
+.specials-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 190px;
+  padding-right: 250px;
+  padding-top: 30px;
+  background-color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+}
+.online-btn {
+   margin-top: 50px;
+  padding: 10px 20px;
+  background-color: #F4CE14;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.menu-section {
+    display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 20px;           
+  padding: 40px;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+article {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+}
+
+
+article img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.testimonials-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal-width columns */
+  gap: 1.5rem;                           /* space between cards */
+  padding: 2rem;
+}
+.star-rating {
+  width: 40px;
+  height: 40px;
+  margin: 10px 0;
+}
+
+.testimonials{
+    color: #333;
+    font-size: 30px;
+    text-align: center;
+}
+
+.about-section {
+     background-color: #f8fcfb;
+  padding-left: 190px;
+  padding-right: 250px;
+  padding-top: 50px;
+ display: flex;                 
+  align-items: left;           
+  justify-content: space-between;           
+  flex-wrap: nowrap;              
+}
+
+.about-content {
+   flex: 1;                        
+  max-width: 400px;         
+}   
+.main-subtitle1 {
+  font-size: 20px;
+  color: rgb(26, 25, 25);   
+}
+.about-images {
+   position: relative;
+    padding-top: 50px;
+    height: 350px;
+  flex: 1;                        /* takes up remaining space */
+  max-width: 50px;               /* optional max width */
+  display: flex;
+  justify-content: right;
+}
+.about-images .img1 {
+    display: block;
+     position: absolute;
+    top: -30px;
+    right: 10px;
+  border-radius: 8px;
+  height: 400px;
+  width: auto;
+}
+
+
+
+.menu-food {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 10px;
+}

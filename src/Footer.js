@@ -7,7 +7,8 @@ function Footer() {
   return (
     <footer className="footer">
      <img src="/ll logo2.png" className="main-logo" alt="Little Lemon Logo" />
-        <h4>Navigation</h4>
+     <div className="navigation">
+        <h4 >Navigation </h4>
          <ul>
           <li><a href="/home">Home</a></li>
           <li><a href="/about">About</a></li>
@@ -17,10 +18,15 @@ function Footer() {
           <li><a href="/login">Login</a></li>
           <li><a href="/contact">Contact</a></li>
         </ul>
-        <h4>Contact Us</h4>
-        <p>1234 Lemon St, Chicago, IL 60601</p>
-        <p>(123) 456-7890</p>
+        </div>
 
+        <div className="contact">
+        <h4>Contact Us</h4>
+        <p className="address">1234 Lemon St, Chicago, IL 60601</p>
+        <p>(123) 456-7890</p>
+       </div>
+       
+       <div className="social-media">
         <h4>Follow Us</h4>
         <ul>
           <li> <a
@@ -44,8 +50,8 @@ function Footer() {
         >
           <FaTwitter /></a></li>
         </ul>
-
-        <p>&copy; 2024 Little Lemon. All rights reserved.</p>
+        </div>
+        <p className="last-p">&copy; 2024 Little Lemon. All rights reserved.</p>
     </footer>
   );
 }
