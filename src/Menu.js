@@ -3,8 +3,8 @@ import greekSalad from "./assets/greek-salad.jpg";
 import bruschetta from "./assets/bruschetta.png";
 import lemonDessert from "./assets/lemon-dessert.jpg";
 import grilledFish from "./assets/grilled-fish.jpg";
-import pastaPrimavera from "./assets/pastaPrimavera.jpg";
-import lambChops from "./assets/lambChops.jpg";
+import pastaPrimavera from "./assets/pasta-primaver.jpg";
+import lambChops from "./assets/lamb-chop.jpg";
 import "./Menu.css";
 
 function Menu() {
