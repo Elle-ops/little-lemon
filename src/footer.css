@@ -12,9 +12,16 @@
 }
 
  .social-media {
+  
+  padding-bottom: 120px;
+}
+
+.social-media ul {
   display: flex;
-  flex-direction: row;
-  gap: 10px;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .footer h4 {
@@ -39,7 +46,30 @@
 .footer a:hover {
   text-decoration: underline;
 }
+.copyright {
+  
+height: 100px;
+  position: relative;
+  text-align: center;
+  margin-top: 20px;
+}
 .last-p {
+  width: 300px;
+  position: absolute;
+  top: 120px;
+right: 510px;
   margin: 5px 0 0 0;
   text-align: center;
+  font-size: 12px;
+  margin-top: 10px;
+}
+.navigation h4{
+margin-top: 35px;
+}
+
+.footer  .main-logo{
+padding-left: 50px;
+}
+.contact{
+  padding-bottom: 60px;
 }
