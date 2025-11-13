@@ -6,8 +6,16 @@ import grilledFish from "./assets/grilled-fish.jpg";
 import pastaPrimavera from "./assets/pasta-primaver.jpg";
 import lambChops from "./assets/lamb-chop.jpg";
 import "./Menu.css";
+import { useNavigate } from "react-router-dom";
 
 function Menu() {
+
+
+  const navigate = useNavigate();
+  const handleOrderNowClick = () => {
+    navigate("/checkout");
+  };
+
   const menuItems = [
     {
       name: "Greek Salad",
@@ -64,7 +72,7 @@ function Menu() {
               <h3>{item.name}</h3>
               <p className="menu-description">{item.description}</p>
               <p className="menu-price">{item.price}</p>
-              <button className="order-btn">Order Now</button>
+              <button className="order-btn" onClick={handleOrderNowClick}>Order Now</button>
             </div>
           </article>
         ))}

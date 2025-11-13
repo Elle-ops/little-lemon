@@ -1,8 +1,19 @@
 import React, { useState } from "react";
 
 import "./OrderOnline.css";
+import { useNavigate } from "react-router-dom";
 
 function OrderOnline() {
+
+const navigate = useNavigate();
+
+  const handleCheckoutClick = () => {
+    navigate("/checkout");
+  };
+
+
+
+
   const [cartCount, setCartCount] = useState(0);
 
   const dishes = [
@@ -64,7 +75,7 @@ function OrderOnline() {
     <section className="order-section">
       <div className="order-header">
         <h2>Order Online</h2>
-        <div className="cart" >
+        <div className="cart" onClick={handleCheckoutClick} >
           <span>🛒</span>
           <span className="cart-count">{cartCount}</span>
         </div>

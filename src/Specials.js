@@ -3,13 +3,20 @@
  import greekSalad from "./assets/greek-salad.jpg";
  import bruschetta from "./assets/bruschetta.png"; 
  import lemonDessert from "./assets/lemon-dessert.jpg"; 
+ import { useNavigate } from "react-router-dom";
  
  function Specials() {
+
+  const navigate = useNavigate();
+  const handleOnlineMenuClick = () => {
+    navigate("/menu");
+  };
+
    return (   
  <>
  <section className="specials-section">
           <h2>This weeks specials!</h2>
-          <button className="online-btn">Online Menu</button>
+          <button className="online-btn" onClick={handleOnlineMenuClick}>Online Menu</button>
         </section>
 
         <section className="menu-section">
