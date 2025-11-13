@@ -7,6 +7,7 @@ import Reservations from './Reservations';
 import OrderOnline from './OrderOnline';
 import Login from './Login';
 import Contact from './Contact';
+import Checkout from './Checkout';
 
 function Main() {
   return (
@@ -16,9 +17,10 @@ function Main() {
         <Route path="/About" element={<About />} />
         <Route path="/Menu" element={<Menu />} />
         <Route path="/Reservations" element={<Reservations />} />
-        <Route path="/OrderOnline" element={<OrderOnline />} />
+        <Route path="/Order-online" element={<OrderOnline />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Contact" element={<Contact />} />
+        <Route path="/Checkout" element={<Checkout />} />
       </Routes>
     </main>
   );

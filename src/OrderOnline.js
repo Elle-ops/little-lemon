@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import "./OrderOnline.css";
 
 function OrderOnline() {
@@ -63,7 +64,7 @@ function OrderOnline() {
     <section className="order-section">
       <div className="order-header">
         <h2>Order Online</h2>
-        <div className="cart">
+        <div className="cart" >
           <span>🛒</span>
           <span className="cart-count">{cartCount}</span>
         </div>

@@ -1,8 +1,18 @@
 import React from "react";
 import "./CallToAction.css";
 import restaurantFood from "./assets/restaurant-food.jpg";
+import { useNavigate } from "react-router-dom";
 
 function CallToAction() {
+
+const navigate = useNavigate();
+
+  const handleReserveClick = () => {
+    navigate("/reservations");
+  };
+
+
+
   return (
     <>
 <section className="intro-section">
@@ -14,7 +24,7 @@ function CallToAction() {
             focused on traditional
             recipes served with a modern
             twist.</p>
-            <button className="reserve-table-btn">Reserve a Table</button>
+            <button className="reserve-table-btn" onClick={handleReserveClick}>Reserve a Table</button>
       </div>
 
             <div className="main-food">
