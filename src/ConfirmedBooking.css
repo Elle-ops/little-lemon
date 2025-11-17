@@ -1,0 +1,13 @@
+.confirm-section {
+  padding: 3rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.confirm-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}

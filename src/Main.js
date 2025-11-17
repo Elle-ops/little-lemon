@@ -14,13 +14,13 @@ function Main() {
     <main>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/About" element={<About />} />
-        <Route path="/Menu" element={<Menu />} />
-        <Route path="/Reservations" element={<Reservations />} />
-        <Route path="/Order-online" element={<OrderOnline />} />
-        <Route path="/Login" element={<Login />} />
-        <Route path="/Contact" element={<Contact />} />
-        <Route path="/Checkout" element={<Checkout />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/menu" element={<Menu />} />
+        <Route path="/reservations" element={<Reservations />} />
+        <Route path="/order-online" element={<OrderOnline />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/checkout" element={<Checkout />} />
       </Routes>
     </main>
   );
