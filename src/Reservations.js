@@ -1,5 +1,5 @@
 /* global fetchAPI, submitAPI */
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
@@ -8,6 +8,7 @@ import "./Reservations.css";
 function Reservations() {
   const navigate = useNavigate();
   const [availableTimes, setAvailableTimes] = useState([]);
+  const [formStatus, setFormStatus] = useState(""); // For ARIA live updates
 
   // Validation schema
   const validationSchema = Yup.object({
@@ -24,7 +25,6 @@ function Reservations() {
     message: Yup.string(),
   });
 
-  // Update available times when date changes
   const handleDateChange = (date) => {
     if (typeof fetchAPI !== "undefined") {
       const times = fetchAPI(date);
@@ -53,45 +53,77 @@ function Reservations() {
     }
 
     if (success) {
-      navigate("/confirmed"); // navigate to confirmed booking page
+      setFormStatus("Reservation submitted successfully!"); // ARIA live region update
+      navigate("/confirmed");
       resetForm();
       setAvailableTimes([]);
     } else {
-      alert("Something went wrong. Please try again.");
+      setFormStatus("Something went wrong. Please try again.");
     }
   };
 
   return (
-    <section className="reserve-section">
-      <h2 className="reserve-title">Reserve a Table</h2>
+    <section className="reserve-section" aria-labelledby="reserve-title">
+      <h2 id="reserve-title" className="reserve-title">
+        Reserve a Table
+      </h2>
+
+      {/* Live region for status messages */}
+      <div aria-live="polite" role="status" className="sr-only">
+        {formStatus}
+      </div>
+
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
       >
-        {({ values, setFieldValue }) => (
-          <Form className="reserve-form">
+        {({ setFieldValue }) => (
+          <Form className="reserve-form" role="form" aria-describedby="reserve-title">
             <div className="form-group">
-              <label htmlFor="name">Name</label>
-              <Field type="text" name="name" placeholder="Enter your first name" />
-              <ErrorMessage name="name" component="div" className="error" />
+              <label htmlFor="name">First Name</label>
+              <Field
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Enter your first name"
+                aria-required="true"
+              />
+              <ErrorMessage name="name" component="div" className="error" aria-live="polite" />
             </div>
 
             <div className="form-group">
               <label htmlFor="surname">Surname</label>
-              <Field type="text" name="surname" placeholder="Enter your surname" />
-              <ErrorMessage name="surname" component="div" className="error" />
+              <Field
+                type="text"
+                name="surname"
+                id="surname"
+                placeholder="Enter your surname"
+                aria-required="true"
+              />
+              <ErrorMessage name="surname" component="div" className="error" aria-live="polite" />
             </div>
 
             <div className="form-group">
-              <label htmlFor="email">Email</label>
-              <Field type="email" name="email" placeholder="Enter your email" />
-              <ErrorMessage name="email" component="div" className="error" />
+              <label htmlFor="email">Email Address</label>
+              <Field
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter your email"
+                aria-required="true"
+              />
+              <ErrorMessage name="email" component="div" className="error" aria-live="polite" />
             </div>
 
             <div className="form-group">
               <label htmlFor="occasion">Occasion</label>
-              <Field as="select" name="occasion">
+              <Field
+                as="select"
+                name="occasion"
+                id="occasion"
+                aria-required="true"
+              >
                 <option value="">Select an occasion</option>
                 <option value="birthday">Birthday</option>
                 <option value="anniversary">Anniversary</option>
@@ -99,12 +131,17 @@ function Reservations() {
                 <option value="business-meeting">Business Meeting</option>
                 <option value="other">Other</option>
               </Field>
-              <ErrorMessage name="occasion" component="div" className="error" />
+              <ErrorMessage name="occasion" component="div" className="error" aria-live="polite" />
             </div>
 
             <div className="form-group">
               <label htmlFor="guests">Number of Guests</label>
-              <Field as="select" name="guests">
+              <Field
+                as="select"
+                name="guests"
+                id="guests"
+                aria-required="true"
+              >
                 <option value="">Select number of guests</option>
                 {[...Array(10)].map((_, i) => (
                   <option key={i + 1} value={i + 1}>
@@ -112,25 +149,32 @@ function Reservations() {
                   </option>
                 ))}
               </Field>
-              <ErrorMessage name="guests" component="div" className="error" />
+              <ErrorMessage name="guests" component="div" className="error" aria-live="polite" />
             </div>
 
             <div className="form-group">
-              <label htmlFor="date">Select Date</label>
+              <label htmlFor="date">Reservation Date</label>
               <Field
                 type="date"
                 name="date"
+                id="date"
+                aria-required="true"
                 onChange={(e) => {
                   setFieldValue("date", e.target.value);
                   handleDateChange(e.target.value);
                 }}
               />
-              <ErrorMessage name="date" component="div" className="error" />
+              <ErrorMessage name="date" component="div" className="error" aria-live="polite" />
             </div>
 
             <div className="form-group">
-              <label htmlFor="time">Select Time</label>
-              <Field as="select" name="time">
+              <label htmlFor="time">Reservation Time</label>
+              <Field
+                as="select"
+                name="time"
+                id="time"
+                aria-required="true"
+              >
                 <option value="">Select a time</option>
                 {availableTimes.map((time) => (
                   <option key={time} value={time}>
@@ -138,7 +182,7 @@ function Reservations() {
                   </option>
                 ))}
               </Field>
-              <ErrorMessage name="time" component="div" className="error" />
+              <ErrorMessage name="time" component="div" className="error" aria-live="polite" />
             </div>
 
             <div className="form-group full-width">
@@ -146,12 +190,17 @@ function Reservations() {
               <Field
                 as="textarea"
                 name="message"
+                id="message"
                 placeholder="Add any special requests..."
                 rows="4"
               />
             </div>
 
-            <button type="submit" className="reserve-btn">
+            <button
+              type="submit"
+              className="reserve-btn"
+              aria-label="Submit Reservation"
+            >
               Submit Reservation
             </button>
           </Form>
