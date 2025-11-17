@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Reservations.css";
 
 function Reservations() {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     name: "",
     surname: "",
@@ -15,14 +18,12 @@ function Reservations() {
 
   const [availableTimes, setAvailableTimes] = useState([]);
 
-  // Fetch available times when the date changes
   useEffect(() => {
     if (formData.date) {
       if (typeof fetchAPI !== "undefined") {
         const times = fetchAPI(formData.date);
         setAvailableTimes(times);
       } else {
-        // Jest environment or fallback
         setAvailableTimes(["17:00", "18:00", "19:00"]);
       }
     }
@@ -42,22 +43,12 @@ function Reservations() {
     }
 
     if (success) {
-      alert("Your reservation has been submitted! 🍋");
-      setFormData({
-        name: "",
-        surname: "",
-        email: "",
-        occasion: "",
-        guests: "",
-        date: "",
-        time: "",
-        message: "",
-      });
-      setAvailableTimes([]);
+      navigate("/confirmed"); // ⭐ Redirect to confirmation page
     } else {
       alert("Something went wrong. Please try again.");
     }
   };
+
 
   return (
     <section className="reserve-section">

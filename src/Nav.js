@@ -8,7 +8,7 @@ function Nav() {
       
       <ul>
         <img src="little-lemon logo.png" className="main-logo" alt="Little Lemon Logo" />
-          <li><Link to="/home">Home</Link></li>
+          <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About</Link></li>
           <li><Link to="/menu">Menu</Link></li>
           <li><Link to="/reservations">Reservations</Link></li>

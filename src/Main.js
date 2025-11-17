@@ -8,6 +8,7 @@ import OrderOnline from './OrderOnline';
 import Login from './Login';
 import Contact from './Contact';
 import Checkout from './Checkout';
+import ConfirmedBooking from './ConfirmedBooking';
 
 function Main() {
   return (
@@ -21,6 +22,7 @@ function Main() {
         <Route path="/login" element={<Login />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/confirmed" element={<ConfirmedBooking />} />
       </Routes>
     </main>
   );
